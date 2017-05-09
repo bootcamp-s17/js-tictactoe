@@ -1,13 +1,26 @@
 .tictactoe {
-  width: 200px;
+  width: 250px;
 }
 
-.notification {
+#notification {
   display: none;
 }
 
-.restartRow {
-  padding-top: 10px;
+#winnerMessage {
+  font-weight: bold;
+  padding: 10px 10px 5px 10px;
+}
+
+#gameBoard {
+  margin-left: 50px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+#restartButton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .space {
