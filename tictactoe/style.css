@@ -1,0 +1,25 @@
+.tictactoe {
+  width: 200px;
+}
+
+.notification {
+  display: none;
+}
+
+.restartRow {
+  padding-top: 10px;
+}
+
+.space {
+  height: 50px;
+  width: 50px;
+  font-size: 25px;
+}
+
+.line-right {
+  border-right: 2px solid #ccc;
+}
+
+.line-bottom {
+  border-bottom: 2px solid #ccc;
+}
