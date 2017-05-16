@@ -19,14 +19,10 @@ function startGame() {
 
   // Reset turn counter
   turn = 0;
-  
+
   // Blank out the spaces
   for (i = 0; i < spaces.length; i++) {
     spaces[i].innerHTML = '';
-  }
-
-  // Add click events
-  for (i = 0; i < spaces.length; i++) {
     spaces[i].addEventListener("click", takeSpace);
   }
 
@@ -45,11 +41,11 @@ function takeSpace() {
   if (gameOver()) {
     win(currentSymbol);
   }
-  
+
 }
 
 function gameOver() {
-  
+
   // Spaces:
   //   0  1  2
   //   3  4  5
@@ -90,9 +86,13 @@ function checkForWin(line) {
 }
 
 function win(winner) {
-  
+
   // Notify players
   winnerMessage.innerHTML = symbols[winner] + " wins!";
   notification.style.display = 'block';
 
+  // once the game is finished, disable the remaining tiles
+  for (i = 0; i < spaces.length; i++) {
+      spaces[i].removeEventListener("click", takeSpace);
+  }
 }
